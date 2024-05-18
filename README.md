@@ -11,6 +11,6 @@ Docker management and useful commands
 | `docker buildx create --name mybuilder --use.` | in case, mac env built docker image doesn't work in Linux env |
 | `docker buildx inspect --bootstrap` | in case, mac env built docker image doesn't work in Linux env |
 | `docker buildx build --platform linux/amd64 -t yourusername/custom-exporter:v0.0.1 --push .` | push to docker hub |
-| `docker logs -f --tail 20 container_id` | check docker logs with 20 log lines limit |
-- docker compose logs -f --tail 20
-- docker rm $(docker ps -aq) -> remove all containers
+| `docker logs -f --tail 20 container_id` | check docker container logs with 20 log lines limit |
+| `docker compose logs -f --tail 20` | check docker compose logs with 20 log lines limit |
+| `docker rm $(docker ps -aq)` | remove all unused docker containers |
