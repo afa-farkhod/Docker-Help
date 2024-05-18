@@ -8,9 +8,9 @@ Docker management and useful commands
 | `docker tag custom-exporter:v0.0.1 test/custom-exporter:v0.0.1.` | docker image pushing process to docker hub |
 | `docker push test/custom-exporter:v0.0.1` | docker image pushing process to docker hub |
 | `docker run -d --rm -p 55800:8000(default_port) --name custom-exporter test/custom-exporter:v0.0.1t` | running docker container with neccessary flags |
-- docker buildx create --name mybuilder --use. (in case, mac env built docker image doesn't work in Linux env)
-- docker buildx inspect --bootstrap (in case, mac env built docker image doesn't work in Linux env)
-- docker buildx build --platform linux/amd64 -t yourusername/custom-exporter:v0.0.1 --push .
-- docker logs -f --tail 20 container_id
+| `docker buildx create --name mybuilder --use.` | in case, mac env built docker image doesn't work in Linux env |
+| `docker buildx inspect --bootstrap` | in case, mac env built docker image doesn't work in Linux env |
+| `docker buildx build --platform linux/amd64 -t yourusername/custom-exporter:v0.0.1 --push .` | push to docker hub |
+| `docker logs -f --tail 20 container_id` | check docker logs with 20 log lines limit |
 - docker compose logs -f --tail 20
 - docker rm $(docker ps -aq) -> remove all containers
