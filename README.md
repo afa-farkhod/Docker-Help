@@ -1,4 +1,4 @@
-# Docker-help
+# Docker-Help
 Docker management and useful commands
 
 | Command | Description |
@@ -14,3 +14,20 @@ Docker management and useful commands
 | `docker logs -f --tail 20 container_id` | check docker container logs with 20 log lines limit |
 | `docker compose logs -f --tail 20` | check docker compose logs with 20 log lines limit |
 | `docker rm $(docker ps -aq)` | remove all unused docker containers |
+
+
+## Troubleshooting
+
+- Sometimes quitting the `Docker` in `MacOS` doesn't work successfully! In this case you can follow these:
+  - Check the process running the docker service
+  ```
+  ps aux | grep docker
+  # then you'll see something similar to this
+  USER 14065   0.0  0.2 411036256  33760   ??  S     6:07PM   0:00.05 /Applications/Docker.app/Contents/MacOS/Docker
+  ```
+  - Then firstly try to kill the `PID` as following
+    ```
+    #  kill -9 PID
+    kill -9 14065
+    ```
+  - After running the command, check one more time for the Docker process, if it still exists which means that 
