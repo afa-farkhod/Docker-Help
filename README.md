@@ -30,4 +30,4 @@ Docker management and useful commands
     #  kill -9 PID
     kill -9 14065
     ```
-  - After running the command, check one more time for the Docker process, if it still exists which means that 
+  - After running the command, check one more time for the Docker process, if it still exists which means that the Docker application is being restarted automatically by another process
