@@ -31,3 +31,7 @@ Docker management and useful commands
     kill -9 14065
     ```
   - After running the command, check one more time for the Docker process, if it still exists which means that the Docker application is being restarted automatically by another process
+    ```
+    # then simply run the following command
+    pkill -f Docker
+    ```
