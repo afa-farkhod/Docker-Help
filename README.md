@@ -54,6 +54,6 @@ sudo find /var/lib/docker/ -name "uniond" | grep $(uname -m)
 ------------------------------------------------------------------
 - While working inside the docker container, to copy contents inside and outside the container, run the following command:
   ```
-docker cp /path/to/your/local/directory/test.txt horcrux-container:/data/test.txt
+  docker cp /path/to/your/local/directory/test.txt horcrux-container:/data/test.txt
   ```
 ------------------------------------------------------------------
