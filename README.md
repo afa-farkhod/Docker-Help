@@ -35,3 +35,15 @@ Docker management and useful commands
     # then simply run the following command
     pkill -f Docker
     ```
+-----------------------------------------------------------------
+- To extract the `executable binary` from Docker image follow this:
+  - pull the docker image file:
+```
+docker pull ghcr.io/unionlabs/uniond-release:v${TAG}
+```
+  - then search for binary uniond in nix store with following command
+```
+sudo find /var/lib/docker/ -name "uniond" | grep $(uname -m)
+```
+  - then copy the executable binary to your destination (ready for use)
+------------------------------------------------------------------
