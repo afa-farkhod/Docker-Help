@@ -52,3 +52,8 @@ sudo find /var/lib/docker/ -name "uniond" | grep $(uname -m)
   docker run -it --rm --name horcrux-container -v /path/to/your/local/directory:/data ghcr.io/strangelove-ventures/horcrux:union-v0.24 /bin/sh
   ```
 ------------------------------------------------------------------
+- While working inside the docker container, to copy contents inside and outside the container, run the following command:
+  ```
+docker cp /path/to/your/local/directory/test.txt horcrux-container:/data/test.txt
+  ```
+------------------------------------------------------------------
