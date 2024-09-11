@@ -79,3 +79,15 @@ permission denied while trying to connect to the Docker daemon socket at unix://
     getent group docker
     docker:x:1007:flow
     ```
+ - Even after above all, it might not work, in this case check for the following file permission mode:
+   ```
+   ls -l /var/run/docker.sock
+   srw-rw---- 1 root root 0 Sep  3 23:46 /var/run/docker.sock
+
+   # it should be root:docker
+   sudo chown root:docker /var/run/docker.sock
+
+   # now we can check groups
+   groups
+   flow adm sudo docker
+   ```
