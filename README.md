@@ -61,3 +61,9 @@ sudo find /var/lib/docker/ -name "uniond" | grep $(uname -m)
   ```
 ------------------------------------------------------------------
 -----------------------------------------------------------------
+- Sometimes when there are several users in Linux besides the admin, running the docker might cause the following error issue
+```
+docker ps
+
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+```
