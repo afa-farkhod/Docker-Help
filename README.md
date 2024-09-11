@@ -75,5 +75,7 @@ permission denied while trying to connect to the Docker daemon socket at unix://
     # then add the particular user to docker group
     sudo usermod -aG docker ${USER_NAME}
 
-
+    # after that check for user addition
+    getent group docker
+    docker:x:1007:flow
     ```
