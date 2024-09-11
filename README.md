@@ -67,3 +67,13 @@ docker ps
 
 permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json": dial unix /var/run/docker.sock: connect: permission denied
 ```
+  - So first thing we do is, check for the groups and see if it has anything , if not we can simply add the docker group as following:
+    ```
+    # first create docker group
+    sudo groupadd docker
+
+    # then add the particular user to docker group
+    sudo usermod -aG docker ${USER_NAME}
+
+
+    ```
