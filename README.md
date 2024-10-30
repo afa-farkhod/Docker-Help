@@ -14,6 +14,7 @@ Docker management and useful commands
 | `docker logs -f --tail 20 container_id` | check docker container logs with 20 log lines limit |
 | `docker compose logs -f --tail 20` | check docker compose logs with 20 log lines limit |
 | `docker rm $(docker ps -aq)` | remove all unused docker containers |
+| `docker compose down && docker compose up -d` | stops the docker compose and runs immediately after stopping it |
 
 
 ## Troubleshooting
