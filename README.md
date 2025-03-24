@@ -62,6 +62,24 @@ sudo find /var/lib/docker/ -name "uniond" | grep $(uname -m)
   ```
 ------------------------------------------------------------------
 -----------------------------------------------------------------
+### Docker setup in Linux
+
+- Add Docker’s official GPG key:
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
+
+- Install Docker
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+- Start and Enable Docker
+  ```
+  sudo systemctl start docker
+  sudo systemctl enable docker
+  ```
+  
 - Sometimes when there are several users in Linux besides the admin, running the docker might cause the following error issue
 ```
 docker ps
