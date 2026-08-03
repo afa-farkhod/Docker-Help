@@ -107,3 +107,10 @@ permission denied while trying to connect to the Docker daemon socket at unix://
    groups
    flow adm sudo docker
    ```
+   ---
+   ```
+   no space left on device
+
+   # just give the VM more room
+   docker builder prune -af
+   ```
