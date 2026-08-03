@@ -38,7 +38,6 @@ Docker management and useful commands
     pkill -f Docker
     ```
 -----------------------------------------------------------------
------------------------------------------------------------------
 - To extract the `executable binary` from Docker image follow this:
   - pull the docker image file:
 ```
@@ -49,19 +48,16 @@ docker pull ghcr.io/unionlabs/uniond-release:v${TAG}
 sudo find /var/lib/docker/ -name "uniond" | grep $(uname -m)
 ```
   - then copy the executable binary to your destination (ready for use)
-------------------------------------------------------------------
 -----------------------------------------------------------------
 - To work inside the docker container run the following command:
   ```
   docker run -it --rm --name horcrux-container -v /path/to/your/local/directory:/data ghcr.io/strangelove-ventures/horcrux:union-v0.24 /bin/sh
   ```
-------------------------------------------------------------------
 -----------------------------------------------------------------
 - While working inside the docker container, to copy contents inside and outside the container, run the following command:
   ```
   docker cp /path/to/your/local/directory/test.txt horcrux-container:/data/test.txt
   ```
-------------------------------------------------------------------
 -----------------------------------------------------------------
 ### Docker setup in Linux
 
